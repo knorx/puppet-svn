@@ -18,4 +18,16 @@ class svn::config(
     group  => $group,
     mode   => '0700',
   }
+  file { "${homedir}/.subversion/auth/svn.simple":
+    ensure => directory,
+    owner  => $user,
+    group  => $group,
+    mode   => '0600',
+  }
+  file { "${homedir}/.subversion/auth/svn.ssl.server":
+    ensure => directory,
+    owner  => $user,
+    group  => $group,
+    mode   => '0700',
+  }
 }

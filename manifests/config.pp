@@ -9,7 +9,6 @@ class svn::config(
     owner   => $user,
     group   => $group,
     mode    => '0700',
-    require => User[$user],
   } ->
   file { "${homedir}/auth":
     ensure => directory,

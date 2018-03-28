@@ -1,30 +1,29 @@
 # Configuration of .subversion and auth
 class svn::config(
   $user,
-  $homedir="/home/${user}",
+  $homedir="/home/${user}/.subversion",
   $group=$user
 ) {
-
-  file { "${homedir}/.subversion":
+  file { "${homedir}":
     ensure  => directory,
     owner   => $user,
     group   => $group,
     mode    => '0700',
     require => User[$user],
   } ->
-  file { "${homedir}/.subversion/auth":
+  file { "${homedir}/auth":
     ensure => directory,
     owner  => $user,
     group  => $group,
     mode   => '0700',
   }
-  file { "${homedir}/.subversion/auth/svn.simple":
+  file { "${homedir}/auth/svn.simple":
     ensure => directory,
     owner  => $user,
     group  => $group,
     mode   => '0600',
   }
-  file { "${homedir}/.subversion/auth/svn.ssl.server":
+  file { "${homedir}/auth/svn.ssl.server":
     ensure => directory,
     owner  => $user,
     group  => $group,

@@ -9,7 +9,7 @@ define svn::config::credentials(
   $mode = '0600',
   $hash = $name,
 ) {
-  file { "${homedir}/.subversion/auth/svn.simple/${hash}":
+  file { "${homedir}/auth/svn.simple/${hash}":
     owner   => $owner,
     group   => $group,
     mode    => $mode,

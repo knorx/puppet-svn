@@ -7,7 +7,7 @@ define svn::config::sslcert(
   $homedir = $svn::config::homedir,
   $hash = $name,
 ) {
-  file { "${homedir}/.subversion/auth/svn.ssl.server/${hash}":
+  file { "${homedir}/auth/svn.ssl.server/${hash}":
     owner   => $owner,
     group   => $group,
     mode    => '0600',

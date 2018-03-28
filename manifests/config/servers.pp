@@ -6,7 +6,7 @@ define svn::config::servers(
   $homedir = $svn::config::homedir,
 ) {
   if $plaintext_passwords {
-    file { "${homedir}/.subversion/servers":
+    file { "${homedir}/servers":
       owner  => $owner,
       group  => $group,
       mode   => '0600',

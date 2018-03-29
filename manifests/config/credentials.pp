@@ -3,7 +3,7 @@ define svn::config::credentials(
   $realmstring,
   $username,
   $password,
-  $owner = $svn::config::user,
+  $owner = $svn::config::owner,
   $group = $svn::config::group,
   $homedir = $svn::config::homedir,
   $mode = '0600',

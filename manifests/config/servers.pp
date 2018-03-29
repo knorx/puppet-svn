@@ -1,7 +1,7 @@
 # SVN server
 define svn::config::servers(
   $plaintext_passwords = false,
-  $owner = $svn::config::user,
+  $owner = $svn::config::owner,
   $group = $svn::config::group,
   $homedir = $svn::config::homedir,
 ) {

@@ -2,7 +2,7 @@
 define svn::config::sslcert(
   $realmstring,
   $value,
-  $owner = $svn::config::user,
+  $owner = $svn::config::owner,
   $group = $svn::config::group,
   $homedir = $svn::config::homedir,
   $hash = $name,

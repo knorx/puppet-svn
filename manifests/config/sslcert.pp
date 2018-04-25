@@ -10,7 +10,7 @@ define svn::config::sslcert(
   file { "${homedir}/auth/svn.ssl.server/${hash}":
     owner   => $owner,
     group   => $group,
-    mode    => '0600',
+    mode    => '0660',
     content => template('svn/sslserver.erb')
   }
 }

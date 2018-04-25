@@ -9,24 +9,24 @@ class svn::config(
     ensure  => directory,
     owner   => $owner,
     group   => $group,
-    mode    => '0700',
+    mode    => '0770',
   } ->
   file { "${homedir}/auth":
     ensure => directory,
     owner  => $owner,
     group  => $group,
-    mode   => '0700',
+    mode   => '0770',
   }
   file { "${homedir}/auth/svn.simple":
     ensure => directory,
     owner  => $owner,
     group  => $group,
-    mode   => '0600',
+    mode   => '0660',
   }
   file { "${homedir}/auth/svn.ssl.server":
     ensure => directory,
     owner  => $owner,
     group  => $group,
-    mode   => '0700',
+    mode   => '0770',
   }
 }

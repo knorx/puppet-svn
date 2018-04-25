@@ -6,7 +6,7 @@ define svn::config::credentials(
   $owner = $svn::config::owner,
   $group = $svn::config::group,
   $homedir = $svn::config::homedir,
-  $mode = '0600',
+  $mode = '0660',
   $hash = $name,
 ) {
   file { "${homedir}/auth/svn.simple/${hash}":

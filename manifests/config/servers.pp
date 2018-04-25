@@ -9,7 +9,7 @@ define svn::config::servers(
     file { "${homedir}/servers":
       owner  => $owner,
       group  => $group,
-      mode   => '0600',
+      mode   => '0660',
       source => 'puppet:///modules/svn/servers',
     }
   }
